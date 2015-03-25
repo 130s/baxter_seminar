@@ -1,5 +1,8 @@
 <launch>
+  <arg name="rviz_config" default="$(find baxter_seminar)/launch/imarker_non-moveit.rviz" />
+
   <include file="$(find baxter_moveit_config)/launch/moveit_rviz.launch" >
     <arg name="config" default="true" />
+    <arg name="rviz_config" value="$(arg rviz_config)" />
   </include>
 </launch>
